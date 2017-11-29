@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Remote Irrigation</string>
+    <string name="title_activity_login">Login</string>
+</resources>

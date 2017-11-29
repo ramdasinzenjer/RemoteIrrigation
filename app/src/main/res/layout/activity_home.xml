@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inzenjer.remoteirrigation.Home">
+
+    <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+        android:id="@+id/main_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+
+            android:layout_height="match_parent">
+
+            <com.cardiomood.android.controls.gauge.SpeedometerGauge
+                android:id="@+id/temprature_meter"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/teprature_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                    android:layout_below="@id/temprature_meter"
+                android:fontFamily="monospace"
+                android:text="  Temprature : "
+                android:textColor="#000000"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.cardiomood.android.controls.gauge.SpeedometerGauge
+                android:id="@+id/humidity_meter"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:layout_below="@id/teprature_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/humidity_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/humidity_meter"
+                android:fontFamily="monospace"
+                android:text="  Humidity : "
+                android:textColor="#000000"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Switch
+                android:text="Turn Mortor on and off"
+                android:id="@+id/motorOnButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/humidity_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="39dp" />
+
+
+        </RelativeLayout>
+
+    </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+
+</RelativeLayout>
